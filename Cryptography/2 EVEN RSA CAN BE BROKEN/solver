@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+from Crypto.Util.number import long_to_bytes, inverse
+import sympy
+from termcolor import colored
+
+N = 16693101132656761508162779621748225810083084986526750111907316058740210589020678529313003440660141542755383525433466820077394609816187529042590885758312118
+e = 65537
+c = 10772140000965865971771320255884543392382727730063041015325650033533245212806584922721519643630533606575056020447956396519347056675295822785518263535602937
+print("Factoring N...")
+factors = sympy.factorint(N)
+if len(factors) == 2:
+    p, q = factors.keys()
+    print(f"Found primes:\np = {p}\nq = {q}")
+
+    phi = (p - 1) * (q - 1)
+    d = inverse(e, phi) # d ≅ e^-1 mod phi <=> d * e ≅ 1 mod phi <=> guess d such that the rest of (d * e) / phi is 1 <=> d*e mod phi = 1 mod phi
+
+    m = pow(c, d, N) # m = c ^ d mod N
+    plaintext = long_to_bytes(m)
+    print(colored(plaintext.decode(), "yellow", attrs=["bold"]))
+else:
+    print("Failed to factor N. RSA modulus may be secure.")
