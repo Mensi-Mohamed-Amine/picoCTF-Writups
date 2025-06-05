@@ -1,0 +1,25 @@
+#!/usr/bin/env python3 
+import base64
+import ast
+from termcolor import colored
+
+def double_base64_decode(encoded_str):
+    first_decode = base64.b64decode(encoded_str).decode('utf-8')
+    inner_base64 = ast.literal_eval(first_decode)  
+    second_decode = base64.b64decode(inner_base64)
+    return second_decode.decode('utf-8')
+
+def caesar_decrypt(ciphertext, shift):
+    decrypted = ''
+    for char in ciphertext:
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            decrypted += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            decrypted += char
+    return decrypted
+
+encoded = "YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclgyZzBOMm8yYXpZNWZRPT0nCg=="
+caesar_ciphertext = double_base64_decode(encoded)
+plaintext = caesar_decrypt(caesar_ciphertext, 7)
+print(colored(plaintext, "yellow", attrs=["bold"]))
