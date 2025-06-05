@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+
+from pwn import *
+import hashlib
+from termcolor import colored
+
+io = remote ('verbal-sleep.picoctf.net', 57356)
+io.recvuntil(b"We have identified a hash: ")
+hash_md5 = io.recvline().strip().decode()
+def crack_md5(target_hash, wordlist_path="/usr/share/wordlists/rockyou.txt"):
+    try:
+        with open(wordlist_path, "r", encoding="latin-1") as f:
+            for word in f:
+                word = word.strip()
+                hashed_word = hashlib.md5(word.encode()).hexdigest()
+                if hashed_word == target_hash.lower():
+                    print(f"[+] Password found: {word}")
+                    return word
+        print("[-] Password not found in the wordlist.")
+        return None
+    except FileNotFoundError:
+        print(f"[-] Wordlist file not found: {wordlist_path}")
+        return None
+password_md5 = crack_md5(hash_md5, "rockyou.txt")
+io.sendline(password_md5.encode())
+io.recvuntil(b"Flag is yet to be revealed!! Crack this hash: ")
+hash_sha1 = io.recvline().strip().decode()
+def crack_sha1(target_hash, wordlist_path="/usr/share/wordlists/rockyou.txt"):
+    try:
+        with open(wordlist_path, "r", encoding="latin-1") as f:
+            for word in f:
+                word = word.strip()
+                hashed_word = hashlib.sha1(word.encode()).hexdigest()
+                if hashed_word == target_hash.lower():
+                    print(f"[+] Password found: {word}")
+                    return word
+        print("[-] Password not found in the wordlist.")
+        return None
+    except FileNotFoundError:
+        print(f"[-] Wordlist file not found: {wordlist_path}")
+        return None
+password_sha1 = crack_sha1(hash_sha1,"rockyou.txt")
+io.sendline(password_sha1.encode())
+io.recvuntil(b"Almost there!! Crack this hash: ")
+hash_sha256 = io.recvline().strip().decode()
+def crack_sha256(target_hash, wordlist_path="/usr/share/wordlists/rockyou.txt"):
+    try:
+        with open(wordlist_path, "r", encoding="latin-1") as f:
+            for word in f:
+                word = word.strip()
+                hashed_word = hashlib.sha256(word.encode()).hexdigest()
+                if hashed_word == target_hash.lower():
+                    print(f"[+] Password found: {word}")
+                    return word
+        print("[-] Password not found in the wordlist.")
+        return None
+    except FileNotFoundError:
+        print(f"[-] Wordlist file not found: {wordlist_path}")
+        return None
+password_sha256 = crack_sha256(hash_sha256, "rockyou.txt")
+io.sendline(password_sha256.encode())
+io.recvuntil(b"The flag is: ")
+
+flag = io.recvline().strip().decode()
+print(colored(flag, "yellow", attrs=["bold"]))
+
