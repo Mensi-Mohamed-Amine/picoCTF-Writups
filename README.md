@@ -1,7 +1,9 @@
 # picoCTF Gym Writeups
 
-Author: Mensi Mohamed Amine  
+Author: Mensi Mohamed Amine
+
 CTF Team: Curiosity
+
 Platform: [https://picoctf.org/](https://picoctf.org/)
 
 ---
