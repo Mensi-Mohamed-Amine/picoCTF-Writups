@@ -6,7 +6,7 @@
 
 ## solving process
 
-![Alt text](hashcrack.gif)
+![Alt text](gif/hashcrack.gif)
 
 ## Solution
 
