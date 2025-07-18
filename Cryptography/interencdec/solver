@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+import base64
+
+enc_flag = "YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclgyMHdNakV5TnpVNGZRPT0nCg=="
+print(enc_flag)
+decoded_bytes = base64.b64decode(enc_flag)
+decoded_text = decoded_bytes.decode("utf-8")
+print(decoded_text[2:-2])
+
+
+decoded_bytes = base64.b64decode(decoded_text[2:-2])
+decoded_text = decoded_bytes.decode("utf-8")
+print(decoded_text)
+
+def caesar_decrypt(ciphertext, shift):
+    result = ""
+    for char in ciphertext:
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            result += char
+    return result
+
+ciphertext = decoded_text
+shift = 7
+
+plaintext = caesar_decrypt(ciphertext, shift)
+print(plaintext)
