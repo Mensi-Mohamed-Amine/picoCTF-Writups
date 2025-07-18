@@ -12,3 +12,15 @@ For this mission we gonna use hashid ,, hashcat along with rockyou.txt
 ### Cracking the first hash
 
 [Alt text](img/2.png)
+
+### Cracking the second hash
+
+[Alt text](img/3.png)
+
+### Cracking the third hash
+
+[Alt text](img/4.png)
+
+### Complete Solution / flag
+
+[Alt text](img/5.png)
