@@ -28,5 +28,5 @@ These writeups are intended for learning and reference purposes, covering variou
 
 ### Cryptography
 
-- [hashcrack](./Cryptography/CaesarCipher/README.md)
+- [hashcrack](./Cryptography/hashcrack/README.md)
 - [interencdec](./Cryptography/interencdec/README.md)
