@@ -4,6 +4,10 @@
 
 ![Alt text](img/1.png)
 
+## solving process
+
+![Alt text](hashcrack.gif)
+
 ## Solution
 
 In this challenge we are given three hashes in which we should crack them to get the flag .
