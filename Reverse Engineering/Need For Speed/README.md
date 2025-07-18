@@ -24,6 +24,12 @@ Now if we hit continue we should see our flag.
 
 ## solver
 
+u can execute this gdb script to get the flag ,, use this command
+
+```bash
+gdb -x solver.gdb ./need-for-speed
+```
+
 ```gdb
 main
 b* set_timer+70
