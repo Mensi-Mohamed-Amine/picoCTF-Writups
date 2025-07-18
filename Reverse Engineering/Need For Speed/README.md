@@ -6,7 +6,7 @@
 
 ## solving process
 
-![Alt text](gif/Need For Speed.gif)
+![Alt text](gif/NeedForSpeed.gif)
 
 ## solution
 
