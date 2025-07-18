@@ -17,12 +17,7 @@ These writeups are intended for learning and reference purposes, covering variou
 
 ## Challenge Categories
 
-- ✅ General Skills
-- ✅ Cryptography
-- ✅ Binary Exploitation
-- ✅ Reverse Engineering
-- ✅ Web Exploitation
-- ✅ Forensics
+- Cryptography
 
 ---
 
