@@ -4,6 +4,10 @@
 
 ![Alt text](img/1.png)
 
+## solving process
+
+![Alt text](gif/interencdec.gif)
+
 ### Solution
 
 For this task we are given a base 64 string we gonna use base64 tool to decode it and then we will get another base 64 string wrapped up with b' ' we will decode it again and we will got a cisaer ciphertext with each char is mapped foreward 7 times ( p -> w )
