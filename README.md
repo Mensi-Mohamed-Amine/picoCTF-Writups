@@ -17,6 +17,7 @@ These writeups are intended for learning and reference purposes, covering variou
 
 ## Challenge Categories
 
+- Reverse Engineering
 - Cryptography
 
 ---
@@ -27,3 +28,7 @@ These writeups are intended for learning and reference purposes, covering variou
 
 - [hashcrack](./Cryptography/hashcrack/README.md)
 - [interencdec](./Cryptography/interencdec/README.md)
+
+### Cryptography
+
+- [Need For Speed](./Reverse Engineering/Need For Speed/README.md)
