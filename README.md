@@ -26,7 +26,7 @@ These writeups are intended for learning and reference purposes, covering variou
 
 ### Reverse Engineering
 
-- - [Need For Speed](./Reverse%20Engineering/Need%20For%20Speed/README.md)
+- [Need For Speed](./Reverse%20Engineering/Need%20For%20Speed/README.md)
 
 ### Cryptography
 
