@@ -10,7 +10,7 @@
 
 ## solution
 
-in this task we have binary file named need-for-speed that has print_flag function that print the flag ,, but we have a function set_timer that is called before the print_flag function and close the program using alarm signal ,, so to solve this task we can use gdb to increase the rdi value exactly before the execution of the call alarm@plt instruction .
+in this task we have binary file named need-for-speed that has print_flag function that print the flag ,, but we have a function set_timer that is called before the print_flag function and close the program using alarm signal before the execution of print_flag function ,, so to solve this task we can use gdb to increase the rdi value exactly before the execution of the call alarm@plt instruction .
 
 ![Alt text](img/2.png)
 
