@@ -1,45 +1,26 @@
-# picoCTF [Year] Writeups
+# picoCTF Gym Writeups
 
 Author: [Your Name or Handle]  
 CTF Team: [Your Team Name]  
-Date: [Event Date Range]  
-Website: [https://picoctf.org](https://picoctf.org)
+Platform: [https://play.picoctf.org/practice](https://play.picoctf.org/practice)
 
 ---
 
 ## Overview
 
-This repository contains my personal writeups for challenges from **picoCTF [Year]**. The writeups are for educational purposes only and aim to share techniques and learning resources used to solve the challenges.
-
----
-
-## Table of Contents
-
-- [General Information](#general-information)
-- [Challenge Categories](#challenge-categories)
-- [Writeups](#writeups)
-- [Tools & Resources](#tools--resources)
-- [Disclaimer](#disclaimer)
-
----
-
-## General Information
-
-- **CTF Name:** picoCTF [Year]
-- **Format:** Jeopardy-style
-- **Difficulty:** Beginner to Intermediate
-- **Organized by:** Carnegie Mellon University
+This repository contains personal writeups for **picoCTF Gym challenges**.  
+These writeups are intended for learning and reference purposes, covering various categories like Binary Exploitation, Cryptography, Forensics, and Web Exploitation.
 
 ---
 
 ## Challenge Categories
 
-- [x] General Skills
-- [x] Cryptography
-- [x] Binary Exploitation
-- [x] Reverse Engineering
-- [x] Web Exploitation
-- [x] Forensics
+- ✅ General Skills
+- ✅ Cryptography
+- ✅ Binary Exploitation
+- ✅ Reverse Engineering
+- ✅ Web Exploitation
+- ✅ Forensics
 
 ---
 
@@ -47,32 +28,58 @@ This repository contains my personal writeups for challenges from **picoCTF [Yea
 
 ### General Skills
 
-- [Challenge Name 1](./GeneralSkills/Challenge1/README.md)
-- [Challenge Name 2](./GeneralSkills/Challenge2/README.md)
+- [Some Assembly Required](./GeneralSkills/SomeAssemblyRequired.md)
+- [Python Wrangling](./GeneralSkills/PythonWrangling.md)
 
 ### Cryptography
 
-- [Challenge Name](./Cryptography/ChallengeName/README.md)
+- [Caesar Cipher](./Cryptography/CaesarCipher.md)
+- [Basic RSA](./Cryptography/BasicRSA.md)
 
 ### Binary Exploitation
 
-- [Challenge Name](./BinaryExploitation/ChallengeName/README.md)
+- [Buffer Overflow 0](./BinaryExploitation/BufferOverflow0.md)
+- [Overflow 1](./BinaryExploitation/Overflow1.md)
 
 ### Reverse Engineering
 
-- [Challenge Name](./ReverseEngineering/ChallengeName/README.md)
+- [Reverseme](./ReverseEngineering/Reverseme.md)
+- [Keygen](./ReverseEngineering/Keygen.md)
 
 ### Web Exploitation
 
-- [Challenge Name](./WebExploitation/ChallengeName/README.md)
+- [Includes](./WebExploitation/Includes.md)
+- [Cookies](./WebExploitation/Cookies.md)
 
 ### Forensics
 
-- [Challenge Name](./Forensics/ChallengeName/README.md)
+- [Disk Investigation](./Forensics/DiskInvestigation.md)
+- [Matryoshka Doll](./Forensics/MatryoshkaDoll.md)
 
 ---
 
 ## Tools & Resources
 
+- [Ghidra](https://ghidra-sre.org/)
 - [pwntools](https://github.com/Gallopsled/pwntools)
-- [Ghidra](https:)
+- [CyberChef](https://gchq.github.io/CyberChef/)
+- [Burp Suite](https://portswigger.net/burp)
+
+---
+
+## Notes
+
+- Some challenge names may vary slightly depending on platform updates.
+- The flags have been intentionally removed or redacted to encourage self-practice.
+
+---
+
+## License
+
+[MIT License](LICENSE)
+
+---
+
+> **Disclaimer:**  
+> These writeups are for educational and ethical hacking purposes only.  
+> Unauthorized access to systems is strictly prohibited.
