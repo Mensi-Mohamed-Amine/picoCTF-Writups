@@ -31,6 +31,10 @@ These writeups are intended for learning and reference purposes, covering variou
 - [reverse_cipher](./Reverse%20Engineering/reverse_cipher/README.md)
 - [Keygenme](./Reverse%20Engineering/Keygenme/README.md)
 
+### Web Exploitation
+
+- [hashcrack](./Web%20Exploitation/login/README.md)
+
 ### Cryptography
 
 - [hashcrack](./Cryptography/hashcrack/README.md)
