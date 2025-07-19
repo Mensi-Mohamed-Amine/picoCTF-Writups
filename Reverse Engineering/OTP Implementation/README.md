@@ -4,6 +4,10 @@
 
 ![Alt text](img/1.png)
 
+## solving process
+
+![Alt text](gif/OTPImplementation.gif)
+
 ## Solution
 
 In this challenge we have a binary that takes a key as input and verify if that key is correct or not ,, for this the binary was doing some jumbling with our input key then he compares it with a 100 byte string
