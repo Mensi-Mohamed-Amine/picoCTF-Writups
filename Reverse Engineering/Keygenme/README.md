@@ -28,6 +28,44 @@ so to solve this we need make some dynamic analysis ,, for that we should input 
 
 ## solver
 
+i used gdb's python api to solve this task :
+
+```python
+#!/usr/bin/env python3
+import gdb
+import re
+
+# Load the binary
+gdb.execute("file ./keygenme")
+
+# Set a breakpoint at the address of printf (or the symbol if available)
+gdb.execute("b *printf")
+
+# Run the binary
+# dummy_flag.txt : "picoCTF{br1ng_y0ur_0wn_k3y_????????}"
+gdb.execute("run < dummy_flag.txt")
+
+# Step out of the current function after hitting the breakpoint
+gdb.execute("finish")
+
+gdb.execute("b* 0x55555555540a")
+
+gdb.execute("c")
+
+flag = gdb.execute("x/s 0x7fffffffdaf0", to_string=True)
+
+print(flag)
+
+
+match = re.search(r'picoCTF\{.*?\}', flag)
+if match:
+    flag = match.group(0)
+    print(f"FLAG : {flag}")
+else:
+    print("Flag not found.")
+gdb.execute("quit")
+```
+
 ## flag
 
 ```
