@@ -14,21 +14,12 @@ In this challenge we have a binary named Keygenme that takes a license key from 
 
 ![Alt text](img/2.png)
 
+in `sub_1209` the program takes the first part of the flag `picoCTF{br1ng*y0ur_0wn_k3y_` and run some obfuscation to add more 8 characters
+so the final flag format we be `picoCTF{br1ng_y0ur_0wn_k3y_12345678}` ,, and finally the program compare the original key with our input which should be 36 character length ,, so to solve this we need to input a dummy 36 char string and make a breakpoint exactly at this line (line 45) and see what the program is comparing our input with which is the flag .
+
+![Alt text](img/3.png)
+
 ## solver
-
-u can execute this gdb script to get the flag ,, use this command
-
-```bash
-gdb -x solver.gdb ./need-for-speed
-```
-
-```gdb
-main
-b* set_timer+70
-c
-set $rdi=50
-c
-```
 
 ## flag
 
