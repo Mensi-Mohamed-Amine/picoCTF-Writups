@@ -28,6 +28,7 @@ These writeups are intended for learning and reference purposes, covering variou
 
 - [OTP Implementation](./Reverse%20Engineering/OTP%20Implementation/README.md)
 - [Need For Speed](./Reverse%20Engineering/Need%20For%20Speed/README.md)
+- [reverse_cipher](./Reverse%20Engineering/reverse_cipher/README.md)
 
 ### Cryptography
 
