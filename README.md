@@ -33,7 +33,8 @@ These writeups are intended for learning and reference purposes, covering variou
 
 ### Web Exploitation
 
-- [hashcrack](./Web%20Exploitation/login/README.md)
+- [login](./Web%20Exploitation/login/README.md)
+- [Most Cookies](./Web%20Exploitation/Most%20Cookies/README.md)
 
 ### Cryptography
 
